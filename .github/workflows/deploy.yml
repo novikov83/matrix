@@ -1,5 +1,5 @@
 # Имя может быть любое, но желательно без пробелов
-name: mvc
+name: matrix
 
 on:
   push:
@@ -55,6 +55,6 @@ jobs:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       with:
         upload_url: ${{steps.create.outputs.upload_url}}
-        asset_path: ./build/mvc-0.0.${{github.run_number}}-Linux.deb
-        asset_name: mvc-0.0.${{github.run_number}}-Linux.deb
+        asset_path: ./build/matrix-0.0.${{github.run_number}}-Linux.deb
+        asset_name: matrix-0.0.${{github.run_number}}-Linux.deb
         asset_content_type: application/vnd.debian.binary-package
