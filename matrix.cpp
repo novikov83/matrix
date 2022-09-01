@@ -12,7 +12,7 @@ public:
 		try {
 			mLine.at(index);
 		}
-		catch (std::out_of_range) {
+		catch (const std::out_of_range&) {
 			mLine[index] = default_value;
 		}
 		return mLine[index];
